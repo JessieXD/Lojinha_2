@@ -1,4 +1,4 @@
-<footer>
+<footer id="segunda">
     <p>Endereço</p>
     <p>Telefone</p>
 
