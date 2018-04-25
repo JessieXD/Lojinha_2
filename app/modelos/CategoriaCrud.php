@@ -1,6 +1,6 @@
 <?php
 
-require 'BDConetion.php';
+require 'BDConection.php';
 require 'Categoria.php';
 
 class CategoriaCrud
@@ -17,7 +17,7 @@ class CategoriaCrud
 
         $categorias = $resultado->fetchAll(PDO::FETCH_CLASS,'Categoria', ['id_categoria' , ' nome_categoria', 'descricao_descricao']);
 
-        return $listaCategorias;
+        return $categorias;
     }
 
     public function getCategoria(int $id){

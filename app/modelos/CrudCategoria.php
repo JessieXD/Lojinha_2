@@ -23,7 +23,7 @@ class CrudCategoria
 
         $categorias = $resultado->fetchAll(PDO::FETCH_ASSOC);
         foreach ($categorias as $categoria){
-            $objcat = new Categoria($categoria['id_categoria'], $categoria['nome_categoria'], $categoria['descricao_categoria']);
+            $objcat = new Categoria($categoria['id_categoria'], $categoria['nome_categoria'], $categoria['desc_categoria']);
             $listaCategorias[] = $objcat;
         }
         return $listaCategorias;

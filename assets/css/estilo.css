@@ -6,3 +6,33 @@
     background: mistyrose;
 
 }
+#menu ul {
+    padding:0px;
+    margin:0px;
+    list-style:none;
+    width: 100%;
+    float: left;
+    white-space: nowrap;
+
+}
+#menu ul li {
+    display: inline-block;
+    padding: 2px 8px;
+    text-decoration: none;
+}
+a {
+
+    color: #4d0800;
+}
+a:hover{
+
+    background-color: #ffcccc;
+}
+
+#terça{
+
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0px;
+}
+

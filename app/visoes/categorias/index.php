@@ -3,11 +3,11 @@
 <h2>Listagem de Categorias </h2>
 
     <table>
-        <thead id="sexta">
+        <thead >
             <th> #</th>
             <th>nome categoria</th>
         </thead>
-        <tbody id="quinta">
+        <tbody >
         <?php foreach ($categorias as $categoria):?>
             <tr>
                 <td><?= $categoria->getId()?></td>

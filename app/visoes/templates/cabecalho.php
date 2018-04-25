@@ -1,6 +1,6 @@
 <html>
 
-<head id = "quarta">
+<head>
     <title></title>
     <link rel="stylesheet" href="../../assets/css/estilo.css">
 </head>
