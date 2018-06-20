@@ -1,4 +1,4 @@
-<footer id="segunda">
+<footer id="lucia">
     <p>Endereço</p>
     <p>Telefone</p>
 

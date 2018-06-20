@@ -11,7 +11,7 @@
 		if ($usuario=='admin' AND $senha=='1234') {
 			$_SESSION['nome'] = 'Administrador';
 			$_SESSION['tipo'] = 'a';
-			header("Location:index.php");
+			header("Location:app/controladores/categorias.php");
 
 		}else{//SE NÃO - MENSAGEM DE ERRO E REDIRECIONA
 			echo "Dados incorretos";

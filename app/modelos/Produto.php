@@ -2,12 +2,12 @@
 
 class Produto{
 
-    private $id;
-    private $nome;
-    private $descricao;
-    private $foto;
-    private $preco;
-    private $id_categoria;
+    public $id;
+    public $nome;
+    public $descricao;
+    public $foto;
+    public $preco;
+    public $id_categoria;
 
     private function __construct(){
 

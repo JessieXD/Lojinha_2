@@ -1,12 +1,12 @@
 <?php require_once '../visoes/templates/cabecalho.php';?>
 
 
-<h2>Listagem de Categorias </h2>
+    <h2>Listagem de Categorias </h2>
 
     <table>
         <thead >
-            <th> #</th>
-            <th>nome categoria</th>
+        <th> #</th>
+        <th>nome categoria</th>
         </thead>
         <tbody id="pedro">
         <?php foreach ($categorias as $categoria):?>

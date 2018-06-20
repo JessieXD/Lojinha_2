@@ -6,7 +6,7 @@
  * Time: 10:56
  */
 
-require_once "Conexao.php";
+require_once "BDConection.php";
 require_once "Produto.php";
 
 class CrudProdutos
@@ -32,7 +32,7 @@ class CrudProdutos
         $consulta = $this->conexao->query("SELECT * FROM tb_produtos WHERE codigo = $codigo");
         $produto = $consulta->fetch(PDO::FETCH_ASSOC);
 
-        return new Produto($produto['nome'], $produto['preco'], $produto['categoria'], $produto['estoque'], $produto['codigo'], $produto['imagem']);
+        return new Produto($produto['id_produto'], $produto['nome_produto'], $produto['descricao_produto'], $produto['foto_produto'], $produto['preco_produto'], $produto['id_categoria']);
 
     }
 

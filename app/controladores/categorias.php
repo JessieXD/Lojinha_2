@@ -18,16 +18,12 @@
         case 'index':
             $crud = new CrudCategoria();
             $categorias = $crud->getCategorias();
-            include '../visoes/templates/cabecalho.php';
             include '../visoes/categorias/index.php';
-            include '../visoes/templates/rodape.php';
             break;
         case 'show' :
             $id=$_GET['id'];
             $crud = new CrudCategoria();
-            $categorias = $crud->getCategoria($id);
-            include '../visoes/templates/cabecalho.php';
+            $categoria = $crud->getCategoria($id);
             include '../visoes/categorias/show.php';
-            include '../visoes/templates/rodape.php';
             break;
     }

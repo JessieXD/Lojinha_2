@@ -1,0 +1,31 @@
+#pedro {
+
+    width: 300px;
+    border-top: mistyrose;
+    border-left: mistyrose;
+    background: mistyrose;
+
+}
+#susana tr {
+    padding:0px;
+    margin:0px;
+    list-style:none;
+    width: 100%;
+    float: left;
+    white-space: nowrap;
+
+}
+#susana tr td {
+    display: inline-block;
+    padding: 2px 8px;
+    text-decoration: none;
+}
+
+#lucia {
+
+    width: 100px;
+    border-top: mistyrose;
+    border-left: mistyrose;
+    background: mistyrose;
+
+}

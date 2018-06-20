@@ -2,9 +2,9 @@
 
 class Categoria
 {
-    private $id;
-    private $nome;
-    private $descricao;
+    public $id;
+    public $nome;
+    public $descricao;
 
     public function __construct($id=null, $nome=null, $descricao=null){
 
