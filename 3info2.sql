@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Tempo de geração: 28/02/2018 às 14:25
+-- Generation Time: 07-Jun-2018 às 16:22
 -- Versão do servidor: 5.7.21-0ubuntu0.16.04.1
--- Versão do PHP: 7.0.22-0ubuntu0.16.04.1
+-- PHP Version: 7.0.22-0ubuntu0.16.04.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,73 +17,94 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `3info2`
+-- Database: `3info2`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `categoria`
+-- Estrutura da tabela `categoria`
 --
 
 CREATE TABLE `categoria` (
   `id_categoria` int(11) NOT NULL,
-  `nome_categoria` varchar(100) NOT NULL,
-  `descricao_categoria` varchar(100) NOT NULL
+  `nome_categoria` varchar(60) NOT NULL,
+  `descricao_categoria` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `categoria`
+--
+
+INSERT INTO `categoria` (`id_categoria`, `nome_categoria`, `descricao_categoria`) VALUES
+(1, 'Espadas', 'Para arrancar a cabeça dos inimigos com estilo. '),
+(2, 'Meio de transporte', 'Para você se locomover com estilo. '),
+(4, 'Taças ', 'Para beber a lagrimas dos inimigos com estilo. '),
+(5, 'Tronos ', 'Para sentar com estilo. ');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `produto`
+-- Estrutura da tabela `produto`
 --
 
 CREATE TABLE `produto` (
   `id_produto` int(11) NOT NULL,
-  `nome_produto` varchar(100) NOT NULL,
-  `descricao_produto` varchar(225) NOT NULL,
-  `foto_produto` varchar(225) NOT NULL,
-  `id_categoria` int(11) NOT NULL,
-  `preco_produto` double NOT NULL
+  `nome_produto` varchar(60) NOT NULL,
+  `descricao_produto` varchar(255) NOT NULL,
+  `foto_produto` varchar(255) NOT NULL,
+  `preco_produto` float NOT NULL,
+  `id_categoria` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Índices de tabelas apagadas
+-- Extraindo dados da tabela `produto`
+--
+
+INSERT INTO `produto` (`id_produto`, `nome_produto`, `descricao_produto`, `foto_produto`, `preco_produto`, `id_categoria`) VALUES
+(1, 'Trono de Ferro', 'O Trono de Ferro é o trono no qual o Rei dos Sete Reinos senta, localizado em uma sala na Fortaleza Vermelha, na cidade do Porto Real. ', '', 759, 1),
+(2, 'Taça Helga Hufflepuff ', 'Pertenceu a uma das quatro fundadoras de Hogwarts, objeto de valor inimaginável.', '', 699, 1),
+(3, 'Varinha da Varinhas', '\r\nÉ dita como sendo a varinha mais poderosa que já existiu, capaz de realizar proezas que normalmente seriam consideradas impossíveis, como remendar uma outra varinha danificada (ou até mesmo quebrada).', '', 3199, 1),
+(4, 'Espada Vorpal', 'A Espada Vorpal é o inimigo de Jaguadarte.\r\n\r\n', '', 949, 2),
+(6, 'Pérolas de Perséfone', '\r\nAcreditava-se que o único modo de entrar e sair do submundo era através de pérolas que a Deusa Perséfone espalhava pelo mundo em busca de novos visitantes.', '', 1799, 4);
+
+--
+-- Indexes for dumped tables
 --
 
 --
--- Índices de tabela `categoria`
+-- Indexes for table `categoria`
 --
 ALTER TABLE `categoria`
   ADD PRIMARY KEY (`id_categoria`);
 
 --
--- Índices de tabela `produto`
+-- Indexes for table `produto`
 --
 ALTER TABLE `produto`
   ADD PRIMARY KEY (`id_produto`),
   ADD KEY `id_categoria` (`id_categoria`);
 
 --
--- AUTO_INCREMENT de tabelas apagadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de tabela `categoria`
+-- AUTO_INCREMENT for table `categoria`
 --
 ALTER TABLE `categoria`
-  MODIFY `id_categoria` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_categoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
--- AUTO_INCREMENT de tabela `produto`
+-- AUTO_INCREMENT for table `produto`
 --
 ALTER TABLE `produto`
-  MODIFY `id_produto` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_produto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
--- Restrições para dumps de tabelas
+-- Constraints for dumped tables
 --
 
 --
--- Restrições para tabelas `produto`
+-- Limitadores para a tabela `produto`
 --
 ALTER TABLE `produto`
   ADD CONSTRAINT `produto_ibfk_1` FOREIGN KEY (`id_categoria`) REFERENCES `categoria` (`id_categoria`);

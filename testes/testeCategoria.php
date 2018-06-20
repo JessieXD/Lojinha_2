@@ -9,7 +9,7 @@ $codigo = filter_input(INPUT_GET, 'codigo', FILTER_VALIDATE_INT); //consulte os 
 
 //$categorias = $crud->getCategorias();
 
-$categoria = $crud->getCategoria(1);
+$categoria = $crud->getCategorias();
 
 print_r($categoria);
 

@@ -17,7 +17,7 @@ class CrudProdutos
 
     public function __construct()
     {
-        $this->conexao = Conexao::getConexao();
+        $this->conexao = BDConection::getConexao();
     }
 
     public function salvar(Produto $produto)
@@ -43,8 +43,8 @@ class CrudProdutos
 
         $listaProdutos = [];
         foreach ($arrayProdutos as $produto) {
-
-            $listaProdutos [] = new Produto($produto['nome'], $produto['preco'], $produto['categoria'], $produto['estoque'], $produto['codigo'], $produto['imagem']);
+            $produto = new Produto($produto['nome'], $produto['preco'], $produto['categoria'], $produto['estoque'], $produto['codigo'], $produto['imagem']);
+            $listaProdutos [] = $produto;
         }
 
         return $listaProdutos;
